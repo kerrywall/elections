@@ -10,6 +10,16 @@ module.exports = function(grunt) {
         }
       }
    },
+   uglify: {
+       options: {
+         mangle: false
+       },
+       my_target: {
+         files: {
+           'js/candidates.json': ['js/candidates.json']
+         }
+       }
+     },
    watch: {
     css: {
        files: ['css/*.scss'],
@@ -41,6 +51,7 @@ module.exports = function(grunt) {
  grunt.loadNpmTasks('grunt-contrib-watch');
  grunt.loadNpmTasks('grunt-autoprefixer');
  grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 
  // Default task(s).
  grunt.registerTask('default', ['connect','watch']);
