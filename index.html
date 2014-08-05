@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Canadian federal election candidates, 1867-2010</title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<div class="wrapper">
+		<h1>Canadian federal election candidates, 1867-2010</h1>
+		<div class="intro">
+			<p>This is a (mostly) searchable treatment of the Library of Parliament's <a href="http://data.gc.ca/data/en/dataset/ea8f2c37-90b6-4fee-857e-984d3060184e" target="_blank">data on Canada's federal election history</a> (general elections and byelections) from 1867 to 2010. You can filter the results by Parliament, first name, last name or occupation. (Occupation is the coolest!)</p>
+			<p>Tips:</p>
+			<ul>
+				<li>Search terms, sadly, must be exact.</li>
+				<li>Capitalize names.</li>
+				<li>Use accents.</li>
+				<li>This is not a smart search, so "writer" and "author" are two completely different sets of results.</li>
+				<li>Use a numeric Parliament number to search by Parliament. 1-40 will work here. Read more at <a href="http://en.wikipedia.org/wiki/List_of_Canadian_federal_parliaments" target="_blank">Wikipedia's list of federal Parliaments</a>.</li>
+			</ul>
+		</div>
+		<form action="" id="howMany" class="howMany">
+			<input class="scope" name="scope" value="elected" type="radio" checked> Elected candidates only
+			<input class="scope" name="scope" value="all" type="radio"> All candidates
+		</form>
+
+		<form action="" id="filter">
+			<label>Search by: </label>
+			<select name="options" id="dropdown">
+				<option value="">---</option>
+				<option class="category" value="election">Parliament</option>
+				<option class="category" value="firstName">First Name</option>
+				<option class="category" value="lastName">Last Name</option>
+				<option class="category" value="occupation">Occupation</option>
+			</select>
+		</form>
+		<div class="phaseTwo">
+			<form action="" id="search">
+				<input id="searchBox" type="text">
+				<input type="submit" value="Search">
+			</form>
+		</div>
+		<div class="returns">
+			<h5 id="showing"></h5>
+			<ul class="list" id="list">
+			
+			</ul>
+			<div class="results" id="results">
+			
+			</div>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="js/candidates.json" type="text/javascript"></script>
+	<script src="js/init.js" type="text/javascript"></script>
+</body>
+</html>
