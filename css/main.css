@@ -142,14 +142,38 @@ body {
 body {
   background: #fff;
   font-weight: lighter;
-  line-height: 1.5; }
+  line-height: 1.5;
+  margin: 0 auto; }
 
 .wrapper {
   width: 80%;
   margin: 0 auto; }
 
+header {
+  background: url(../commons2.JPG);
+  background-size: cover;
+  background-position: bottom left;
+  padding: 50px 20px;
+  color: #f7f7f7;
+  text-shadow: 2px 2px 0 #000;
+  text-align: center;
+  letter-spacing: 1px;
+  font-family: 'Oswald', sans-serif;
+  -webkit-box-shadow: 0 0 10px #000;
+          box-shadow: 0 0 10px #000; }
+
 .intro {
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  font-family: 'Roboto Slab', serif; }
+  .intro .disclaimer {
+    border: 3px solid #c0392b;
+    padding: 10px;
+    color: #c0392b;
+    border-radius: 10px;
+    width: 100px;
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer; }
 
 a {
   color: #000;
@@ -180,8 +204,10 @@ form input {
 
 .list {
   font-size: 14px;
-  width: 30%;
+  display: inline;
   float: left;
+  width: 22.91667%;
+  margin: 0 1.04167%;
   list-style-type: none;
   padding: 0; }
   .list li {
@@ -195,8 +221,10 @@ form input {
       font-weight: bold; }
 
 .results {
-  width: 70%;
-  float: left; }
+  display: inline;
+  float: left;
+  width: 72.91667%;
+  margin: 0 1.04167%; }
 
 .candidate {
   width: 15px;
@@ -232,3 +260,16 @@ form input {
 
 .soCred {
   background: #27ae60; }
+
+@media (max-width: 768px) {
+  .list {
+    display: inline;
+    float: left;
+    width: 97.91667%;
+    margin: 0 1.04167%; }
+
+  .results {
+    display: inline;
+    float: left;
+    width: 97.91667%;
+    margin: 0 1.04167%; } }

@@ -3,12 +3,19 @@
 $showing = $('#showing');
 $results = $('#results');
 $list = $('#list');
+$phaseOne = $('.phaseOne');
 $phaseTwo = $('.phaseTwo');
 $search = $('#search');
 
 // submit the form
 
 $('document').ready(function() {
+
+	//console.log(candidates);
+
+	// hide the dropdown until the user has voluntarily loaded the data
+
+	$phaseOne.hide();
 	
 	// hide the search box
 
@@ -24,6 +31,14 @@ $('document').ready(function() {
 
 		$userScope = $(this).val();
 
+	});
+
+	// initialize the data
+
+	$('.getData').on('click', function() {
+		$phaseOne.show();
+		return candidates;
+		$('.disclaimer').hide();
 	});
 
 	// determine what the user wants based on how they use the dropdown menu
@@ -48,7 +63,7 @@ $('document').ready(function() {
 
 	$('#search').on('submit', function(e) {
 		e.preventDefault();
-
+		console.log(e);
 		$searchTerm = $('#searchBox').val();
 
 		$results.html("");
@@ -86,7 +101,7 @@ $('document').ready(function() {
 
 					$list.append('<li class="names"><span class="name">' + name + '</span><span class="party">' + party + '</span><span class="province">' + province + '</span><span class="year">' + year + '</span></li>');
 
-					$results.append('<div class="candidate ' + partyClass + '" title="' + party + '"></div>');
+					$results.append('<div class="hint--bottom candidate ' + partyClass + '" data-hint="' + party + '"></div>');
 
 				}
 			}
