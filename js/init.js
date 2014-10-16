@@ -13,7 +13,7 @@ $('document').ready(function() {
 
 	//console.log(candidates);
 
-	// hide the dropdown until the user has voluntarily loaded the data
+	// hide the dropdown until the data is ready
 
 	$phaseOne.hide();
 	
@@ -38,7 +38,7 @@ $('document').ready(function() {
 	$('.getData').on('click', function() {
 		$phaseOne.show();
 		return candidates;
-		$('.disclaimer').hide();
+		$('.disclaimer').hide()
 	});
 
 	// determine what the user wants based on how they use the dropdown menu
